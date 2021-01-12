@@ -30,10 +30,12 @@ jxRequirements:
     provider: minikube
   environments:
   - key: dev
+    owner: ascheman
+    repository: jx3-microk8s-demo-2021-01-12
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: 94.130.153.251.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -secret-infra.
@@ -41,6 +43,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: mygituser
   repository: bucketrepo
   secretStorage: vault
   vault: {}
